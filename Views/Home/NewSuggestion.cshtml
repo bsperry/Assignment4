@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Restraunt Suggesstions";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to enter your restraunt suggestions to Bri.</p>
+<br />
+
+@model Assignment42.Models.NewSuggestion
+
+<form asp-action="NewSuggestion" method="post">
+    <div>
+        <label asp-for="Name">Name</label>
+        <input id="Name" asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Restraunt_Name">Restraunt Name</label>
+        <input id="Restraunt_Name" asp-for="Restraunt_Name" />
+    </div>
+    <div>
+        <label asp-for="Favorite_Dish">Favorite Dish</label>
+        <input id="Favorite_Dish" asp-for="Favorite_Dish" />
+    </div>
+    <div>
+        <label asp-for="Phone">Phone</label>
+        <input id="Phone" asp-for="Phone" />
+    </div>
+
+    <button type="submit">Suggest Restraunt</button>
+    <button type="reset">Reset Form</button>
+
+
+</form>
